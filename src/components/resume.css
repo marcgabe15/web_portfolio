@@ -1,0 +1,12 @@
+.section-resume {
+    height: 400px;
+    background-color: tan;
+    padding-bottom: 30px;
+
+}
+
+.resume-header {
+    margin-bottom: 40px;
+    font-size: 40px;
+    padding-top: 15px;
+}
