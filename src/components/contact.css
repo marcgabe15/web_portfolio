@@ -1,14 +1,6 @@
-.contact a:visited {
-    color: #337ab7;
-  }
-  
-  .contact a:link {
-    color: #337ab7;
-  }
-  
-  .btn-social-icon {
-    font-size: 40px;
-  }
+.contact-icon {
+  color: #1976d2;
+}
 .contact-img {
   display: flex;
   justify-content: center;
@@ -25,4 +17,5 @@
     margin-bottom: 30px;
     font-size: 40px;
     font-weight: bold;
+    color: #1976d2;
 }

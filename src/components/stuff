@@ -1,0 +1,24 @@
+{projects.map(project => (
+                <Card className="project-card">
+                    <CardActionArea>
+                        {/* <Img
+                        title={project.node.name}
+                        alt="a project"
+                        sizes={project.node.childImageSharp.sizes}
+                        className="card-media"
+                        /> */}
+                        <CardContent>
+                        <h4>{`${project.name}`}</h4>
+                        <p>{`${project.description}`}</p>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        <Button size="small" color="primary">
+                        Share
+                        </Button>
+                        <Button size="small" color="primary">
+                        Learn More
+                        </Button>
+                    </CardActions>
+                </Card>
+            ))}

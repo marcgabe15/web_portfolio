@@ -9,27 +9,40 @@
     margin-left: 2px;
 }
 .header-color {
-    background: #373B44;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: transparent !important;
+    /* background: #373B44;
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+    background: linear-gradient(to right, #4286f4, #373B44);  */
     box-shadow: none !important;
 
-  }
+}
+.no-text-decor {
+    text-decoration: none;
+}
 .header-color-scroll {
     background:white !important;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12) !important;
 
 }
+#resume-download {
+    text-decoration: none !important;
+}
 .blue-font {
-    color: #007BFF;
+    color: #007BFF !important;
+    text-decoration: none !important;
 }
 .white-font {
-    color: #ffffff;
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 .nav-bar {
-    transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
+    transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+
+}
+.nav-bar a:hover {
+    color: #646464;
 }

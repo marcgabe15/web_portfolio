@@ -2,35 +2,29 @@
     {
       "name": "Github",
       "icon": "github",
-      "prefix" : "fab",
+      "prefix" : "faGithub",
       "type": "social-media",
       "url": "https://github.com/marcgabe15"
     },
-    {
-      "name": "BitBucket",
-      "icon": "bitbucket",
-      "prefix" : "fab",
-      "type": "social-media",
-      "url": "https://bitbucket.org/dreamteamufappdev/"
-    },
+
     {
       "name": "Instagram",
       "icon": "linkedin",
-      "prefix" : "fab",
+      "prefix" : "faLinkedin",
       "type": "social-media",
       "url": "https://www.linkedin.com/in/marc-diaz-19a9a4150/"
     },
     {
       "name": "Email",
       "icon": "envelope",
-      "prefix" : "fas",
+      "prefix" : "faEnvelope",
       "type": "email",
       "url": "mailto:marcgabe15@gmail.com"
     },
     {
       "name": "Facebook",
       "icon": "facebook",
-      "prefix": "fab",
+      "prefix": "faFacebook",
       "type": "social-media",
       "url": "https://www.facebook.com/mgsdiaz55"
     }

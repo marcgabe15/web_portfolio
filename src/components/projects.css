@@ -7,6 +7,17 @@
     max-width: 345px;
     margin-bottom: 15px;
 }
+.project-name {
+    text-align: center;
+    text-decoration: none !important;
+}
+.cardtext {
+    font-size: 1em;
+    text-decoration: none !important;
+    max-height: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .card-media {
     /* margin-bottom: 20px; */
     /* height: 140px;
@@ -27,4 +38,21 @@
     margin-bottom: 40px;
     font-size: 40px;
     padding-top: 15px;
+    color: #646464;
+}
+.contained-image {
+    width: auto;
+    height:200px;
+    margin: 0 auto;
+}
+.blah {
+    text-decoration: none !important;
+}
+
+@media only screen and (max-width: 786) {
+    .contained-image {
+        width: auto;
+        height: 100px;
+        margin: 0 auto;
+    }
 }

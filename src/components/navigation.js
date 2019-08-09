@@ -3,9 +3,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import "./navigation.css";
+import resume from '../images/marc_diaz_resume.pdf'
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+// import IconButton from '@material-ui/core/IconButton';
+// import MenuIcon from '@material-ui/icons/Menu';
 import Scrollchor from 'react-scrollchor';
 // import Tabs from '@material-ui/core/Tabs';
 // import Tab from '@material-ui/core/Tab';
@@ -61,17 +62,17 @@ class Navigation extends Component {
         <div className = "nav-root">
             <AppBar position = "fixed"  className={navbarstyle}>
             <Toolbar>
-                <IconButton edge="start"  color="inherit" aria-label="Menu" >
+                {/* <IconButton edge="start"  color="inherit" aria-label="Menu" >
                     <MenuIcon className={fontColor} />
-                </IconButton>
+                </IconButton> */}
                 <Typography variant="h6" className="name-title" noWrap>
                     <Scrollchor to="#front-page" animate={{duration: 500}} className={fontColor}>
                         <h3>Marc Diaz</h3>
                     </Scrollchor>
                 </Typography>
-                <Button color="inherit"><Scrollchor to="#front-page" animate={{duration: 250}} className={fontColor}>About Me</Scrollchor></Button>
+                <Button color="inherit"><Scrollchor to="#about-me" animate={{duration: 350}} className={fontColor}>About Me</Scrollchor></Button>
                 <Button color="inherit"><Scrollchor to="#projects" animate={{duration: 500}} className={fontColor}>Projects</Scrollchor></Button>
-                <Button color="inherit"><Scrollchor to="#resume" animate={{duration: 750}} className={fontColor}>Resume</Scrollchor></Button>
+                <Button color="inherit"><a href={resume} download className={fontColor}>Resume</a></Button>
                 <Button color="inherit"><Scrollchor to="#contact" animate={{duration: 1000}} className={fontColor}>Contact</Scrollchor></Button>
             </Toolbar>
             </AppBar>

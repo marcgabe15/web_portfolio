@@ -1,38 +1,38 @@
 [
     {
         "name": "PingCare",
-        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+        "description": "a progressive web app to let users ping locations on Google Maps for maitenance requests",
         "img": "pingcare.png",
-        "url": "https://github.com/marcgabe15"
+        "url": "https://devpost.com/software/pingcare"
     },
     {
         "name": "Food.IO",
-        "description": "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-        "img": "pingcare.png",
-        "url": "https://github.com/marcgabe15"
+        "description": "A React Native app to classify food using Clarifai's object detection api",
+        "img": "food.png",
+        "url": "https://devpost.com/software/food-io"
     },
     {
         "name": "Achievement blog",
-        "description": "sdLizards are a widespread group of squamate reptiles, with over 6,000 species, rangingacross all continents except Antarctica",
-        "img": "pingcare.png",
-        "url": "https://github.com/marcgabe15"
+        "description": "A microblog for users to post lifetime goals. Tech: AWS S3, Auth0, Vue, and MongoDB",
+        "img": "success.png",
+        "url": "https://github.com/marcdiaz15"
     },
     {
         "name": "Dream Team",
-        "description": "sdLizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-        "img": "pingcare.png",
-        "url": "https://github.com/marcgabe15"
+        "description": "Data Visualization web app to record, analyze, and recommend therapies to pediatric patients",
+        "img": "DTElogo.png",
+        "url": "https://github.com/dreamteamuf"
     },
     {
         "name": "UFind",
-        "description": "sdLizards are a widespread group of squamate reptiles, with over 6,000 species, rangingacross all continents except Antarctica",
-        "img": "pingcare.png",
-        "url": "https://github.com/marcgabe15"
+        "description": "Anroid AR app that allows users to tour UF using virtual cues",
+        "img": "french_fries.png",
+        "url": "https://github.com/T-JAM-VR4SG"
     },
     {
-        "name": "Hopefully something with estimote",
-        "description": "sdLizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-        "img": "pingcare.png",
-        "url": "https://github.com/marcgabe15"
+        "name": "Web Scraper",
+        "description": "Working on an Instagram/Amazon web scraper for fake reviews/users",
+        "img": "instalogo.png",
+        "url": "https://github.com/marcgabe15/web-scraper"
     }
 ]

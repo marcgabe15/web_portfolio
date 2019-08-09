@@ -1,12 +1,14 @@
 import React from 'react';
 import "./footer.css";
+import {faStar} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const Footer = () => (
     <footer>
         <div>
-            Inspired by many
+            Inspired by my girlfriend and my family <FontAwesomeIcon icon={faStar}/>
             <br/>
-            Coded by Marc Diaz
+            Built by Marc Diaz
         </div>
     </footer>
 );

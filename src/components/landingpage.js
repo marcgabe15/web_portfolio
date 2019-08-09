@@ -1,17 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { useStaticQuery, graphql} from 'gatsby';
 import "./landingpage.css";
 import Grid from '@material-ui/core/Grid';
 import Img from "gatsby-image";
-import Image from "./shared/Image";
-import profile from '../images/portfolio.jpg';
-import devicons from '../data/devicons.json';
-
-//<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"></link>
+import { faHtml5, faBootstrap, faCss3, faReact} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const LandingPage = () => {
     const data = useStaticQuery(graphql`
     query {
-        file(relativePath: { eq: "background-cover.jpg" }) {
+        file(relativePath: { eq: "background-cover.jpeg" }) {
             childImageSharp {
                 fluid(maxWidth: 1200) {
                  ...GatsbyImageSharpFluid
@@ -23,36 +20,48 @@ const LandingPage = () => {
     `)
     return (
         <section id="front-page">
-            {/* <Img
+            <Img
             title="background picture"
             alt="the city that never sleeps"
             fluid={data.file.childImageSharp.fluid}
-            /> */}
+            style={{
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                width: "100%",
+                height: "100%"
+            }}
+            className="cover-img"
+            />
+            <div className="overlay" />
+            <div className="center">
+            <h1 className="name">
+                <b>HI, I'M MARC</b>
+            </h1>
+            <p className="greetings">Let's change the world together!</p>
+            </div>
             <Grid
             container
-            direction="column"
+            direction="row"
             justify="space-evenly"
             alignItems="center"
             className="landing-grid"
             >
-            <img 
+            {/* <img 
             src = {profile}
             alt = "profile pic"
             className = "profile-pic"
-            />
+            /> */}
             <div className="banner-text">
-                <h1>Software Engineer</h1>
+                <h2>HI, I'M MARC</h2>
+                <h4>Coding for the Social Good</h4>
                 <hr/>
-                <p>HTML/CSS | Bootstrap | Node.js | React.js</p>
+                <p>HTML/CSS | Bootstrap | React.js | Graphql</p>
                 <div className="dev-links">
-                    {devicons.map(devicon => (
-                        <div className="col-sm-2 align-icon develop-icon">
-                            <span
-                                className={`${devicon.prefix} fa-${devicon.icon}`}
-                                alt={`External link to my ${devicon.name} account`}
-                            />
-                        </div>
-                    ))}
+                    <FontAwesomeIcon icon = {faHtml5}  size="3x" className="inside-icon"/>
+                    <FontAwesomeIcon icon = {faCss3} size="3x" className="inside-icon"/>
+                    <FontAwesomeIcon icon = {faBootstrap} size="3x" className="inside-icon"/>
+                    <FontAwesomeIcon icon = {faReact} size="3x" className="inside-icon"/>
                 </div>
             </div>
             </Grid>

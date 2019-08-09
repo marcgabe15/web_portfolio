@@ -2,14 +2,17 @@
     background: #373B44;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
   }
   #front-page {
     padding-bottom: 30px;
-
+    position: relative;
+    width: 100vw;
+    height: 100vh;
   }
 
   .profile-pic {
-    border-radius: 100%;
+    border-radius: 20%;
     max-height: 300px;
     max-width: 300px;
     margin: 5em auto;
@@ -18,16 +21,20 @@
     background-size: cover;
 
   }
+  .cover-img {
+    margin-bottom: 50px;
+  }
   .banner-text {
-    background-color: black;
-    opacity: 0.8;
-    width: 75%;
-    margin: auto;
+    padding-top: 20px;
+    /* background-color: gray; */
+    z-index: 5;
+    width: 100%;
+    margin:  0 auto;
     border-radius: 10px;
     text-align:center;
+    top: 30%;
   }
-  .banner-text h1 {
-    font-size: 66px;
+  .banner-text h2 {
     font-weight: bold;
     color:white;
   }
@@ -36,7 +43,13 @@
     width: 50%;
     margin: auto;
   }
-  
+  .inside-icon {
+    color: #fff;
+  }
+  .banner-text h4 {
+    color: white;
+    font-size: 2em;
+  }
   .banner-text p {
     color: white;
     font-size: 20px;
@@ -48,8 +61,9 @@
     justify-content: space-between;
     width: 50%;
     margin: 0 auto;
+    margin-bottom: 10px;
   }
   .develop-icon {
-    color: silver;
+    color: white;
     font-size: 40px;
   }
