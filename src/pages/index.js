@@ -5,12 +5,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 // import Layout from "../components/layout"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
-import Navigation from "../components/navigation";
-import Footer from "../components/footer";
-import Contact from "../components/contact";
-import LandingPage from "../components/landingpage";
-import Projects from "../components/projects";
-import AboutMe from "../components/aboutme";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import Contact from "../components/Contact";
+import LandingPage from "../components/Landingpage";
+import Projects from "../components/Projects";
+import AboutMe from "../components/Aboutme";
 // import Resume from "../components/resume";
 const IndexPage = ({data}) => {
   const {edges: ProjectImgs} = data.ProjectImgs
