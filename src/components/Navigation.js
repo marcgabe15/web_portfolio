@@ -8,10 +8,6 @@ import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
 // import MenuIcon from '@material-ui/icons/Menu';
 import Scrollchor from 'react-scrollchor';
-// import Tabs from '@material-ui/core/Tabs';
-// import Tab from '@material-ui/core/Tab';
-// import { Link } from '@material-ui/core';
-
 class Navigation extends Component {
     constructor(props) {
         super(props);
