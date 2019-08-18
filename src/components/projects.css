@@ -18,21 +18,6 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.card-media {
-    /* margin-bottom: 20px; */
-    /* height: 140px;
-    display: block; */
-    /* position: absolute;
-    top: 0px;
-    left: 0px;
-    transition: opacity 0.5s ease 0.25s;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    opacity: 0; */
-    
-}
 
 .projects-header {
     margin-bottom: 40px;

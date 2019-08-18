@@ -47,11 +47,6 @@ const LandingPage = () => {
             alignItems="center"
             className="landing-grid"
             >
-            {/* <img 
-            src = {profile}
-            alt = "profile pic"
-            className = "profile-pic"
-            /> */}
             <div className="banner-text">
                 <h2>HI, I'M MARC</h2>
                 <h4>Coding for the Social Good</h4>

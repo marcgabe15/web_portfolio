@@ -6,8 +6,10 @@ import "./navigation.css";
 import resume from '../images/marc_diaz_resume.pdf'
 import Button from '@material-ui/core/Button';
 // import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
 import Scrollchor from 'react-scrollchor';
+import Collapse from '@material-ui/core/Collapse';
+import { Menu } from '@material-ui/core';
 class Navigation extends Component {
     constructor(props) {
         super(props);
@@ -66,10 +68,19 @@ class Navigation extends Component {
                         <h3>Marc Diaz</h3>
                     </Scrollchor>
                 </Typography>
-                <Button color="inherit"><Scrollchor to="#about-me" animate={{duration: 350}} className={fontColor}>About Me</Scrollchor></Button>
-                <Button color="inherit"><Scrollchor to="#projects" animate={{duration: 500}} className={fontColor}>Projects</Scrollchor></Button>
-                <Button color="inherit"><a href={resume} download className={fontColor}>Resume</a></Button>
-                <Button color="inherit"><Scrollchor to="#contact" animate={{duration: 1000}} className={fontColor}>Contact</Scrollchor></Button>
+                <div>
+                  <Button color="inherit" onClick={this.toggleNavbar}>
+                    <MenuIcon/>
+                  </Button>
+
+
+                </div>
+                <div>
+                  <Button color="inherit"><Scrollchor to="#about-me" animate={{duration: 350}} className={fontColor}>About Me</Scrollchor></Button>
+                  <Button color="inherit"><Scrollchor to="#projects" animate={{duration: 500}} className={fontColor}>Projects</Scrollchor></Button>
+                  <Button color="inherit"><a href={resume} download className={fontColor}>Resume</a></Button>
+                  <Button color="inherit"><Scrollchor to="#contact" animate={{duration: 1000}} className={fontColor}>Contact</Scrollchor></Button>
+                </div>
             </Toolbar>
             </AppBar>
         </div>
