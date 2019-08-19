@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 const Footer = () => (
     <footer>
         <div>
-            Inspired by my girlfriend and my family <FontAwesomeIcon icon={faStar}/>
+            Inspired by my girlfriend, family, and friends <FontAwesomeIcon icon={faStar}/>
             <br/>
             Built by Marc Diaz
         </div>

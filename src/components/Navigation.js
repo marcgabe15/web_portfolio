@@ -60,28 +60,53 @@ class Navigation extends Component {
         <div className = "nav-root">
             <AppBar position = "fixed"  className={navbarstyle}>
             <Toolbar>
-                {/* <IconButton edge="start"  color="inherit" aria-label="Menu" >
-                    <MenuIcon className={fontColor} />
-                </IconButton> */}
                 <Typography variant="h6" className="name-title" noWrap>
                     <Scrollchor to="#front-page" animate={{duration: 500}} className={fontColor}>
                         <h3>Marc Diaz</h3>
                     </Scrollchor>
                 </Typography>
-                <div>
-                  <Button color="inherit" onClick={this.toggleNavbar}>
-                    <MenuIcon/>
+                <div className="mobile-navbar">
+                  <Button onClick={this.toggleNavbar}>
+                    <MenuIcon className={fontColor} id="mobile-menuicon"/>
                   </Button>
-
-
                 </div>
-                <div>
+                <div className="normal-navbar">
                   <Button color="inherit"><Scrollchor to="#about-me" animate={{duration: 350}} className={fontColor}>About Me</Scrollchor></Button>
                   <Button color="inherit"><Scrollchor to="#projects" animate={{duration: 500}} className={fontColor}>Projects</Scrollchor></Button>
                   <Button color="inherit"><a href={resume} download className={fontColor}>Resume</a></Button>
                   <Button color="inherit"><Scrollchor to="#contact" animate={{duration: 1000}} className={fontColor}>Contact</Scrollchor></Button>
                 </div>
             </Toolbar>
+            <Collapse in={this.state.isOpen} className="the-collapse" unmountOnExit>
+                <Scrollchor to="#about-me" animate={{duration: 350}} className={fontColor}>
+                  <div className="row collapse-row" onClick={this.handleCloseCollapse}>
+                    <div>
+                      About Me
+                    </div>
+                  </div>
+                </Scrollchor>
+                <Scrollchor to="#projects" animate={{duration: 500}} className={fontColor}>
+                  <div className="row collapse-row" onClick={this.handleCloseCollapse}>
+                    <div>
+                      Projects
+                    </div>
+                  </div>
+                </Scrollchor>
+                <a href={resume} download className={fontColor}>
+                  <div className="row collapse-row" onClick={this.handleCloseCollapse}>
+                    <div>
+                      Resume
+                    </div>
+                  </div>
+                </a>
+                <Scrollchor to="#contact" animate={{duration: 1000}} className={fontColor}>
+                  <div className="row collapse-row" onClick={this.handleCloseCollapse}>
+                    <div>
+                      Contact
+                    </div>
+                  </div>  
+                </Scrollchor>
+            </Collapse>
             </AppBar>
         </div>
         )

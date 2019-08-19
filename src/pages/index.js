@@ -1,6 +1,7 @@
 import React from "react"
 // import { Link } from "gatsby"
 import { graphql } from "gatsby"
+import "./mainpage.css"
 import 'bootstrap/dist/css/bootstrap.css';
 // import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -15,7 +16,7 @@ import AboutMe from "../components/Aboutme";
 const IndexPage = ({data}) => {
   const {edges: ProjectImgs} = data.ProjectImgs
   return  (
-      <div>
+      <div className="hidden-overflow">
       <Navigation/>
       <LandingPage/>
       <AboutMe/>

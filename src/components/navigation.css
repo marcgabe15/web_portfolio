@@ -31,8 +31,11 @@
     color: #007BFF !important;
     text-decoration: none !important;
 }
+#mobile-menuicon {
+    cursor: pointer;
+}
 .white-font {
-    color: #ffffff !important;
+    color: 	#131516 !important;
     text-decoration: none !important;
 }
 .nav-bar {
@@ -43,6 +46,33 @@
   -ms-transition: all .5s ease;
 
 }
+.the-collapse {
+    display: column;
+}
+.collapse-row:hover {
+    background-color: #f1f3f4;
+}
+.collapse-row {
+    cursor: pointer;
+}
+.collapse-row div {
+    margin-left: 40px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 0.8rem;
+}
+
 .nav-bar a:hover {
     color: #646464;
+}
+.mobile-navbar {
+    display:none;
+}
+@media (max-width: 768px) {
+    .mobile-navbar {
+        display: block;
+    }
+    .normal-navbar {
+        display:none;
+    }
 }
