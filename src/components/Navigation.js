@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import Scrollchor from 'react-scrollchor';
 import Collapse from '@material-ui/core/Collapse';
-import { Menu } from '@material-ui/core';
 class Navigation extends Component {
     constructor(props) {
         super(props);

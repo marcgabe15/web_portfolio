@@ -33,7 +33,6 @@ class Contact extends Component {
                        const logo = logomap.find(n => {
                             return n.logo === contact.icon
                         })
-                        console.log(logo)
                         return (
                             <div className="col-sm-2 align-icon" key={contact.url}>
                                 <a
