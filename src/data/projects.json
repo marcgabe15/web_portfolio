@@ -1,5 +1,11 @@
 [
     {
+        "name": "Care++",
+        "description": "Web app that analyzes weather conditions to alert caretakers that lead to heatstroke",
+        "img": "careplusplus.png",
+        "url": "https://devpost.com/software/care-c7thvu"
+    },
+    {
         "name": "PingCare",
         "description": "a progressive web app to let users ping locations on Google Maps for maitenance requests",
         "img": "pingcare.png",
