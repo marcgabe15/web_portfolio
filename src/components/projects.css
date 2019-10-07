@@ -3,9 +3,11 @@
     background-color: #f6f6f6;
 }
 
+
 .project-card {
     max-width: 345px;
     margin-bottom: 15px;
+    height: 371px;
 }
 .project-name {
     text-align: center;
