@@ -8,11 +8,11 @@
     },
 
     {
-      "name": "Instagram",
+      "name": "Linkedin",
       "icon": "linkedin",
       "prefix" : "faLinkedin",
       "type": "social-media",
-      "url": "https://www.linkedin.com/in/marc-diaz-19a9a4150/"
+      "url": "https://www.linkedin.com/in/Marc-Gabriel-Diaz/"
     },
     {
       "name": "Email",
