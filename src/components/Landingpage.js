@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Img from "gatsby-image";
 import { faHtml5, faBootstrap, faCss3, faReact} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Typist from 'react-typist'
 const LandingPage = () => {
     const data = useStaticQuery(graphql`
     query {
@@ -48,10 +49,14 @@ const LandingPage = () => {
             className="landing-grid"
             >
             <div className="banner-text">
+                <Typist>
                 <h2>HI, I'M MARC</h2>
-                <h4>Coding for the Social Good</h4>
-                <hr/>
+                <Typist.Delay ms={200}/>
+                <h4>And I Code for the Social Good!</h4>
+                {/* <hr/> */}
+                <Typist.Delay ms={500}/>
                 <p>HTML/CSS | Bootstrap | React.js | Graphql</p>
+                </Typist>
                 <div className="dev-links">
                     <FontAwesomeIcon icon = {faHtml5}  size="3x" className="inside-icon"/>
                     <FontAwesomeIcon icon = {faCss3} size="3x" className="inside-icon"/>

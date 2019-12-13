@@ -3,30 +3,10 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Img from "gatsby-image";
-// import Image from './shared/Image'
 import Grid from '@material-ui/core/Grid';
 import projects from "../data/projects.json";
 import './projects.css';
-
-//  export const query = graphql`{
-//     allFile(sort: {order: ASC, fields: absolutePath}, filter: {relativePath: {regex: "/projects/.*.png/"}}) {
-//       edges {
-//         node {
-//           relativePath
-//           name
-//           childImageSharp {
-//             sizes(maxWidth: 320) {
-//               presentationWidth
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }`
 class Projects extends Component {
-    constructor(props) {
-        super(props);
-    }
     render () {
         const projectImgs = this.props.projectImgs
         return (

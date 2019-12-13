@@ -1,6 +1,6 @@
 .section-resume {
     height: 400px;
-    background-color: tan;
+    background-color: black;
     padding-bottom: 30px;
 
 }
@@ -9,4 +9,5 @@
     margin-bottom: 40px;
     font-size: 40px;
     padding-top: 15px;
+    color: #ffffff;
 }

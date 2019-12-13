@@ -15,6 +15,7 @@ class Navigation extends Component {
         this.state = {
             hasScrolledDown: false,
             isOpen: false,
+            isMobile: false,
         }
         this.handleScroll = this.handleScroll.bind(this);
         this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -28,6 +29,18 @@ class Navigation extends Component {
         this.setState({
           hasScrolledDown: scrolledDownEnough
         });
+    }
+    handleSizeChange() {
+      if (window.innerWidth < 768) {
+        this.setState({
+          isMobile: true,
+        })
+      } else {
+        this.setState({
+          isMobile: false,
+          isOpen: false
+        })
+      }
     }
 
     toggleNavbar() {
@@ -46,15 +59,19 @@ class Navigation extends Component {
 
     componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("resize", this.handleSizeChange.bind(this));
     }
 
     componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("resize", this.handleSizeChange.bind(this));
     }
 
     render() {
         const navbarstyle = this.state.hasScrolledDown ? "header-color-scroll nav-bar" : "header-color nav-bar";
         const fontColor = this.state.hasScrolledDown ? "blue-font nav-bar" : "white-font nav-bar";
+        const longdisplay = this.state.isMobile ? "none" : "block";
+        const mobiledisplay = this.state.isMobile ? "block" : "none";
         return (
         <div className = "nav-root">
             <AppBar position = "fixed"  className={navbarstyle}>
@@ -64,12 +81,12 @@ class Navigation extends Component {
                         <h3>Marc Diaz</h3>
                     </Scrollchor>
                 </Typography>
-                <div className="mobile-navbar">
+                <div className="mobile-navbar" style= {{display: mobiledisplay}}>
                   <Button onClick={this.toggleNavbar}>
                     <MenuIcon className={fontColor} id="mobile-menuicon"/>
                   </Button>
                 </div>
-                <div className="normal-navbar">
+                <div className="normal-navbar" style={{display: longdisplay}}>
                   <Button color="inherit"><Scrollchor to="#about-me" animate={{duration: 350}} className={fontColor}>About Me</Scrollchor></Button>
                   <Button color="inherit"><Scrollchor to="#projects" animate={{duration: 500}} className={fontColor}>Projects</Scrollchor></Button>
                   <Button color="inherit"><a href={resume} download className={fontColor}>Resume</a></Button>
