@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useStaticQuery, graphql} from 'gatsby';
 import "./landingpage.css";
 import Grid from '@material-ui/core/Grid';
@@ -7,6 +7,10 @@ import { faHtml5, faBootstrap, faCss3, faReact} from '@fortawesome/free-brands-s
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Typist from 'react-typist'
 const LandingPage = () => {
+    const [count, setCount] = useState(1)
+    useEffect(() => {
+        setCount(1)
+    }, [count])
     const data = useStaticQuery(graphql`
     query {
         file(relativePath: { eq: "background-cover.jpeg" }) {
@@ -49,14 +53,8 @@ const LandingPage = () => {
             className="landing-grid"
             >
             <div className="banner-text">
-                <Typist>
                 <h2>HI, I'M MARC</h2>
-                <Typist.Delay ms={200}/>
-                <h4>And I Code for the Social Good!</h4>
-                {/* <hr/> */}
-                <Typist.Delay ms={500}/>
-                <p>HTML/CSS | Bootstrap | React.js | Graphql</p>
-                </Typist>
+                <p>HTML/CSS | Bootstrap | React.js | Graphql</p>  
                 <div className="dev-links">
                     <FontAwesomeIcon icon = {faHtml5}  size="3x" className="inside-icon"/>
                     <FontAwesomeIcon icon = {faCss3} size="3x" className="inside-icon"/>
@@ -64,6 +62,22 @@ const LandingPage = () => {
                     <FontAwesomeIcon icon = {faReact} size="3x" className="inside-icon"/>
                 </div>
             </div>
+            <div className="banner-text">
+            {count ? (
+                    <Typist cursor={{show: false}} onTypingDone={() => setCount(0)} avgTypingDelay={75}>
+                        <h4>I am a Software Engineer</h4>
+                        <Typist.Backspace count={24} delay={800}/>
+                        <h4>I write Code</h4>
+                        <Typist.Backspace count={12} delay={800}/>
+                        <h4>I like to workout!</h4>
+                        <Typist.Backspace count={18} delay={800}/>
+                        <h4>I code for the Social Good</h4>
+                        <Typist.Backspace count={26} delay={800}/>
+                    </Typist>
+                ) : ("")
+                }
+            </div>
+
             </Grid>
         </section>
     )
