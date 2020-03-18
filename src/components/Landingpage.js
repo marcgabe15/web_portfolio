@@ -34,7 +34,7 @@ const LandingPage = () => {
             alignItems="center"
             className="landing-grid"
             >
-            <div className="banner-text" style={{marginTop: "17%"}}>
+            <div className="banner-text">
                 <h1 style={{fontSize: '3em'}}>HI, I'M MARC</h1>
                 <div>
                 {/* <h3 style={{display: 'inline-block', marginTop: '2%', marginBottom: '2%', marginRight: '2%'}}><code title="a.k.a." style={{color: 'white', fontWeight: '700'}}>&gt;</code>
