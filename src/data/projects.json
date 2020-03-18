@@ -1,5 +1,11 @@
 [
     {
+        "name": "Spect App",
+        "description": "Web app that allows pre collegiate teens to find opportunities in their local community",
+        "img": "spect-logo.png",
+        "url": "https://github.com/LeaderLync/Spect-App"
+    },
+    {
         "name": "Care++",
         "description": "Web app that analyzes weather conditions to alert caretakers that lead to heatstroke",
         "img": "careplusplus.png",

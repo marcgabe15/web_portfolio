@@ -23,9 +23,8 @@ const IndexPage = ({data}) => {
       <LandingPage/>
       <AboutMe/>
       <Projects projectImgs={ProjectImgs}/>
-      {/* <Resume/> */}
       <Contact/>
-      <Resume/>
+      {/* <Resume/> */}
       <Footer/>
       </div>
       // <Navigation/>

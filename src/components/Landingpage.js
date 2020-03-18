@@ -5,7 +5,9 @@ import Grid from '@material-ui/core/Grid';
 import Img from "gatsby-image";
 import { faHtml5, faBootstrap, faCss3, faReact} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ImageFlip from './shared/ImageFlip'
 import Typist from 'react-typist'
+import PhotoMotion from './shared/PhotoMotion'
 const LandingPage = () => {
     const [count, setCount] = useState(1)
     useEffect(() => {
@@ -24,27 +26,7 @@ const LandingPage = () => {
       }
     `)
     return (
-        <section id="front-page">
-            <Img
-            title="background picture"
-            alt="the city that never sleeps"
-            fluid={data.file.childImageSharp.fluid}
-            style={{
-                position: 'absolute',
-                left: 0,
-                top: 0,
-                width: "100%",
-                height: "100%"
-            }}
-            className="cover-img"
-            />
-            <div className="overlay" />
-            <div className="center">
-            <h1 className="name">
-                <b>HI, I'M MARC</b>
-            </h1>
-            <p className="greetings">Let's change the world together!</p>
-            </div>
+        <section className="landing-grid" id="front-page">
             <Grid
             container
             direction="row"
@@ -52,31 +34,32 @@ const LandingPage = () => {
             alignItems="center"
             className="landing-grid"
             >
-            <div className="banner-text">
-                <h2>HI, I'M MARC</h2>
-                <p>HTML/CSS | Bootstrap | React.js | Graphql</p>  
-                <div className="dev-links">
-                    <FontAwesomeIcon icon = {faHtml5}  size="3x" className="inside-icon"/>
-                    <FontAwesomeIcon icon = {faCss3} size="3x" className="inside-icon"/>
-                    <FontAwesomeIcon icon = {faBootstrap} size="3x" className="inside-icon"/>
-                    <FontAwesomeIcon icon = {faReact} size="3x" className="inside-icon"/>
-                </div>
-            </div>
-            <div className="banner-text">
-            {count ? (
+            <div className="banner-text" style={{marginTop: "17%"}}>
+                <h1 style={{fontSize: '3em'}}>HI, I'M MARC</h1>
+                <div>
+                {/* <h3 style={{display: 'inline-block', marginTop: '2%', marginBottom: '2%', marginRight: '2%'}}><code title="a.k.a." style={{color: 'white', fontWeight: '700'}}>&gt;</code>
+                </h3> */}
+                <div style={{display: 'inline-block'}}>
+                    {count ? (
                     <Typist cursor={{show: false}} onTypingDone={() => setCount(0)} avgTypingDelay={75}>
-                        <h4>I am a Software Engineer</h4>
-                        <Typist.Backspace count={24} delay={800}/>
-                        <h4>I write Code</h4>
-                        <Typist.Backspace count={12} delay={800}/>
-                        <h4>I like to workout!</h4>
-                        <Typist.Backspace count={18} delay={800}/>
-                        <h4>I code for the Social Good</h4>
-                        <Typist.Backspace count={26} delay={800}/>
+                        <h4 style={{fontSize: '1.5rem'}}>I am a Software Engineer</h4>
+                        <Typist.Backspace count={24} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>I write Code</h4>
+                        <Typist.Backspace count={12} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>I like to workout!</h4>
+                        <Typist.Backspace count={18} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>Code, Break, Repeat</h4>
+                        <Typist.Backspace count={26} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>I love Cooking :)</h4>
+                        <Typist.Backspace count={31} delay={1500}/>
                     </Typist>
-                ) : ("")
+                ) : (<h4/>)
                 }
+                </div>
+                </div>
+                <PhotoMotion/>
             </div>
+
 
             </Grid>
         </section>

@@ -31,8 +31,9 @@ class Projects extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                         >
-                            <Card className="project-card">
-                                <CardActionArea>
+                            
+                            <Card style={{margin: '5px 10px'}}>
+                                <CardActionArea className="project-card">
                                     <Img
                                         title={project.name}
                                         alt="screen shot of project"
