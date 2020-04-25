@@ -20,7 +20,7 @@
 }
 
 .typing-move {
-    left: 40%;
+    left: 33%;
 }
 @media only screen and (max-width: 768px) {
     .typing-move {
