@@ -13,3 +13,22 @@
 .aboutme-grid {
     margin-bottom: 50px;
 }
+.about-txt {
+    width: 75%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.typing-move {
+    left: 40%;
+}
+@media only screen and (max-width: 768px) {
+    .typing-move {
+        left: 28%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .typing-move {
+        left: 12%;
+    }
+}

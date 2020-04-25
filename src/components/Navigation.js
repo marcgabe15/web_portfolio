@@ -58,6 +58,7 @@ class Navigation extends Component {
       }
 
     componentDidMount() {
+      this.handleSizeChange()
     window.addEventListener("scroll", this.handleScroll);
     window.addEventListener("resize", this.handleSizeChange.bind(this));
     }

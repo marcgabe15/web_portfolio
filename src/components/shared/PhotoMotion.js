@@ -13,22 +13,22 @@ const logomap = [
   {
       logo: 'html',
       icon: faHtml5,
-      color: "#FF008C"
+      color: "#dd4b26"
   },
   {
       logo: 'CSS3',
       icon: faCss3,
-      color: "#D309E1"
+      color: "#2962ff"
   },
   {
       logo: 'Bootstrap',
       icon: faBootstrap,
-      color: "#9C1AFF"
+      color: "#609"
   },
   {
       logo: 'React',
       icon: faReact,
-      color: "#7700FF"
+      color: "#61dafb"
   }
 ]
 
@@ -43,12 +43,12 @@ const PhotoMotion = () => {
   }, [colors]);
 
   return (
-    <ul className="moving-logos" style = {{margin: '0 auto', justifyContent: 'space-between'}}>
+    <ul className="moving-logos" style = {{margin: '0 auto',paddingTop:'20px', justifyContent: 'space-between'}}>
       {colors.map(b => (
         <motion.li
           key={b.color}
           layoutTransition={spring}
-          style={{color: `${b.color}` }}
+          style={{color: `${b.color}`  }}
         >
            <FontAwesomeIcon icon={b.icon}  size="3x" className="inside-icon"/>
         </motion.li>

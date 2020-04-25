@@ -13,11 +13,12 @@ const LandingPage = () => {
     useEffect(() => {
         setCount(1)
     }, [count])
-    const data = useStaticQuery(graphql`
+
+    const data2 = useStaticQuery(graphql`
     query {
-        file(relativePath: { eq: "background-cover.jpeg" }) {
+        file(relativePath: { eq: "super-close-up.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxWidth: 400, quality: 100) {
                  ...GatsbyImageSharpFluid
                  presentationWidth
                 }
@@ -25,37 +26,26 @@ const LandingPage = () => {
         }
       }
     `)
+
     return (
         <section className="landing-grid" id="front-page">
             <Grid
             container
-            direction="row"
+            direction="column"
             justify="space-evenly"
             alignItems="center"
             className="landing-grid"
             >
             <div className="banner-text">
-                <h1 style={{fontSize: '3em'}}>HI, I'M MARC</h1>
-                <div>
-                {/* <h3 style={{display: 'inline-block', marginTop: '2%', marginBottom: '2%', marginRight: '2%'}}><code title="a.k.a." style={{color: 'white', fontWeight: '700'}}>&gt;</code>
-                </h3> */}
-                <div style={{display: 'inline-block'}}>
-                    {count ? (
-                    <Typist cursor={{show: false}} onTypingDone={() => setCount(0)} avgTypingDelay={75}>
-                        <h4 style={{fontSize: '1.5rem'}}>I am a Software Engineer</h4>
-                        <Typist.Backspace count={24} delay={1000}/>
-                        <h4 style={{fontSize: '1.5rem'}}>I write Code</h4>
-                        <Typist.Backspace count={12} delay={1000}/>
-                        <h4 style={{fontSize: '1.5rem'}}>I like to workout!</h4>
-                        <Typist.Backspace count={18} delay={1000}/>
-                        <h4 style={{fontSize: '1.5rem'}}>Code, Break, Repeat</h4>
-                        <Typist.Backspace count={26} delay={1000}/>
-                        <h4 style={{fontSize: '1.5rem'}}>I love Cooking :)</h4>
-                        <Typist.Backspace count={31} delay={1500}/>
-                    </Typist>
-                ) : (<h4/>)
-                }
-                </div>
+                <h1 style={{fontSize: '3em'}}>HI, I'M MARC!</h1>
+                <p>Developer | Learner | Food Enthusiast</p>
+                <div style={{margin: '0 auto', maxWidth: '250px'}}>
+                <Img
+                title="profile picture"
+                alt="about me picture"
+                fluid={data2.file.childImageSharp.fluid}
+                className="cool-me"
+                />
                 </div>
                 <PhotoMotion/>
             </div>

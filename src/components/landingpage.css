@@ -1,7 +1,7 @@
 .landing-grid {
-  background: #bdc3c7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*background: #bdc3c7;  /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+  /*background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
   
   }
@@ -38,22 +38,17 @@
   }
   .banner-text h1 {
     font-weight: bold;
-    color:white;
+    color:#808080;
   }
   h4 {
     font-size: 1.5rem;
   }
-  .inside-icon {
-    color: #fff;
-  }
   .banner-text h4 {
-    color: white;
+    color: #808080;
     font-size: 2em;
   }
   .banner-text p {
-    color: white;
-    font-size: 1.5rem;
-    padding-top: 1em;
+    color: #808080;
   }
 
   .dev-links {
@@ -84,7 +79,7 @@ ul {
 
 @media only screen and (max-width: 768px) {
   .moving-logos {
-    width: 85%;
+    width: 75%;
   }
   .banner-text {
     margin-top:17%

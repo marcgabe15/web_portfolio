@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image";
 import Image from "./shared/Image";
@@ -6,8 +6,13 @@ import Grid from '@material-ui/core/Grid';
 import "./aboutme.css";
 import AboutMeLeftSideBar from '../images/AboutMeLeftSideBar.svg';
 import AboutMeRightSideBar from '../images/AboutMeRightSideBar.svg';
-
+import Typist from 'react-typist'
 const AboutMe = () => {
+  const [count, setCount] = useState(1)
+  useEffect(() => {
+      setCount(1)
+  }, [count])
+
     const data = useStaticQuery(graphql`
     query {
         file(relativePath: { eq: "super-close-up.jpg" }) {
@@ -34,6 +39,23 @@ const AboutMe = () => {
                   lighten
                 />
                 <h2 className="text-center about-header" id="about-me">ABOUT ME</h2>
+                <div className="typing-move"style={{display: 'inline-block', position:'absolute'}}>
+                    {count ? (
+                    <Typist cursor={{show: false}} onTypingDone={() => setCount(0)} avgTypingDelay={75}>
+                        <h4 style={{fontSize: '1.5rem'}}>I love to mentor others!</h4>
+                        <Typist.Backspace count={24} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>want to build connections</h4>
+                        <Typist.Backspace count={25} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>Hiking and workout junkie</h4>
+                        <Typist.Backspace count={25} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>Coding Breaking Repeating</h4>
+                        <Typist.Backspace count={25} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>Code for the Social Good!</h4>
+                        <Typist.Backspace count={25} delay={1500}/>
+                    </Typist>
+                ) : (<h4/>)
+                }
+                </div>
                 <Grid
                 container
                 direction="row"
@@ -41,15 +63,7 @@ const AboutMe = () => {
                 alignItems="center"
                 className="aboutme-grid"
                 >
-                    <div className="col-sm-5">
-                      <Img
-                        title="profile picture"
-                        alt="about me picture"
-                        fluid={data.file.childImageSharp.fluid}
-                        className="cool-me"
-                      />
-                    </div>
-                    <div className="col-sm-7 about-txt">
+                    <div className="about-txt">
                       <p>
                         Hello! I'm a software engineer looking for opportunities to work in full-stack or AI. I am quick to adapt, love to learn, and always
                         looking forward to working with new tech!
