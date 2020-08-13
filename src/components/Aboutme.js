@@ -39,11 +39,11 @@ const AboutMe = () => {
                   lighten
                 />
                 <h2 className="text-center about-header" id="about-me">ABOUT ME</h2>
-                <div className="typing-move"style={{display: 'inline-block', position:'absolute'}}>
+                <div className="typing-move" style={{display: 'inline-block', position:'absolute'}}>
                     {count ? (
                     <Typist cursor={{show: false}} onTypingDone={() => setCount(0)} avgTypingDelay={75}>
-                        <h4 style={{fontSize: '1.5rem'}}>I love to mentor others!</h4>
-                        <Typist.Backspace count={24} delay={1000}/>
+                        <h4 style={{fontSize: '1.5rem'}}>I love to mentor others:)</h4>
+                        <Typist.Backspace count={25} delay={1000}/>
                         <h4 style={{fontSize: '1.5rem'}}>want to build connections</h4>
                         <Typist.Backspace count={25} delay={1000}/>
                         <h4 style={{fontSize: '1.5rem'}}>Hiking and workout junkie</h4>
