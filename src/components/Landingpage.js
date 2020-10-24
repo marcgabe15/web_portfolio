@@ -38,7 +38,7 @@ const LandingPage = () => {
             >
             <div className="banner-text">
                 <h1 style={{fontSize: '3em'}}>HI, I'M MARC!</h1>
-                <p>Developer | Learner | Food Enthusiast</p>
+                <p>Developer | Lifelong Learner | Foodie</p>
                 <div style={{margin: '0 auto', maxWidth: '250px'}}>
                 <Img
                 title="profile picture"
