@@ -42,9 +42,6 @@
     "react",
     "website"
   ],
-  "engines": {
-    "node": ">=12.0.0"
-  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
