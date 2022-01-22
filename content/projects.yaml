@@ -1,0 +1,22 @@
+- name: Edugator
+  url: https://edugator.app
+  description: A practice problem and coding website for students in University of Florida's Data Structures class
+  status: live
+  tags:
+    - TypeScript
+    - React
+    - AWS
+  icon: website
+  image: images/CodingPage.png
+
+- name: Care++
+  url: https://devpost.com/software/care-c7thvu
+  description: An IoT development board that monitors in home weather conditions to alert health care providers in response to heatstroke or fall.
+  status: live
+  tags:
+    - JavaScript
+    - Python
+    - Matrix Creator
+    - Google Cloud
+  icon: website
+  image: images/project.png
