@@ -1,11 +1,47 @@
 import React, { useRef, useState } from "react"
 import { ProfileType } from "../../types"
 import "./contact-form.css"
+import Recaptcha from "react-google-recaptcha"
+
+
+const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY
+if (typeof RECAPTCHA_KEY === 'undefined') {
+  throw new Error(`
+  recaptcha not defined
+  `)
+}
+
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
 
 const ContactForm = ({ budget }) => {
   const [isInquiry, setIsInquiry] = useState(false)
   const [selectedBudget, setSelectedBudget] = useState(budget.default)
   const inquiryDetails = useRef(null)
+  const [state, setState] = useState({})
+  const recaptchaRef = React.createRef()
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    }).then(() => alert("Success! Thank you for submitting your form"))
+    .catch((error) => alert(error));
+  }
 
   return (
     <>
@@ -16,7 +52,7 @@ const ContactForm = ({ budget }) => {
         Contact
       </h5>
 
-      <form data-netlify="true" className="flex flex-wrap" method="post">
+      <form data-netlify="true" className="flex flex-wrap" method="post" name="contact" onSubmit={handleSubmit}>
         <div className="flex flex-wrap w-full">
           <div className="w-full lg:w-1/3 py-px lg:px-px">
             <input
@@ -27,6 +63,7 @@ const ContactForm = ({ budget }) => {
               placeholder="NAME"
               required
               type="text"
+              onChange={handleChange}
             />
           </div>
           <div className="w-full lg:w-1/3 py-px lg:px-px">
@@ -38,6 +75,7 @@ const ContactForm = ({ budget }) => {
               placeholder="EMAIL ADDRESS"
               required
               type="email"
+              onChange={handleChange}
             />
           </div>
           <div className="w-full lg:w-1/3 py-px lg:px-px">
@@ -84,7 +122,9 @@ const ContactForm = ({ budget }) => {
                   max={budget.max}
                   min={budget.min}
                   name="budget"
-                  onChange={e => setSelectedBudget(e.currentTarget.value)}
+                  onChange={e => {
+                    setState({ ...state, [e.target.name]: e.target.value })
+                    setSelectedBudget(e.currentTarget.value)}}
                   step="1"
                   type="range"
                 />
@@ -102,6 +142,7 @@ const ContactForm = ({ budget }) => {
                 name="project_type"
                 placeholder="PROJECT TYPE (E.G. WEBSITE, MOBILE APP)"
                 type="text"
+                onChange={handleChange}
               />
             </div>
 
@@ -113,6 +154,7 @@ const ContactForm = ({ budget }) => {
                 name="phone"
                 placeholder="PHONE NUMBER"
                 type="tel"
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -126,6 +168,7 @@ const ContactForm = ({ budget }) => {
             placeholder="MESSAGE"
             required
             rows="6"
+            onChange={handleChange}
           ></textarea>
           <div className="bg-back-light">
             <input
@@ -135,6 +178,7 @@ const ContactForm = ({ budget }) => {
             />
           </div>
         </div>
+        <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
       </form>
     </>
   )
